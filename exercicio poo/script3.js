@@ -12,7 +12,7 @@ class Carrinho{
   }
   adicionarProduto(produto){
     this.produtos.push(produto)
-    console.log(`o produto ${produto.nome} adicionado ao carrinho`)
+    console.log(`o produto ${produto.nome} adicionado ao carrinho valor ${produto.preco} ` )
   }
 
   calcularTotal(){
@@ -32,4 +32,4 @@ let carrinho = new Carrinho()
 carrinho.adicionarProduto(produto1)
 carrinho.adicionarProduto(produto2)
 
-console.log(carrinho + "total do carrinho" + carrinho.calcularTotal())
+console.log( "total do carrinho R$ " + carrinho.calcularTotal())
