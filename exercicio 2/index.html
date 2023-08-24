@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>exercicio sobre classes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="criarCarro" class="criarCarro">
+    
+    <div class="campoForm">
+      <label>Nome</label>
+      <input type="text" name="f_nome" id="f_nome" value="" >
+    </div>
+
+    <div class="campoForm">
+      <labe> portas</labe>
+      <input type="text" name="f_portas" id="f_portas" value="" >
+    </div>
+
+    <div class="campoForm">
+      <labe> Blindagem</labe>
+      <input type="text" name="f_blind" id="f_blind" value="" >
+    </div>
+
+    <div class="campoForm">
+      <labe>Munição </labe>
+      <input type="text" name="f_municao" id="f_municao" value="" >
+    </div>
+
+    <div class="campoForm">
+      <div class="radio">
+        <input type="radio" name="f_tipo" id="f_tipoMilitar" value="M">Militar
+      </div>
+      <div class="radio">
+        <input type="radio" name="f_tipo" id="f_tipoNormal" value="n" checked > Normal
+      </div>
+    </div>
+
+    <div class="campoForm">
+      <button id="btn_add">Adicionar</button>
+    </div>
+
+  </div>
+
+  <div class="carros"  id="carros">
+    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
