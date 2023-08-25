@@ -27,23 +27,35 @@ f_normal.addEventListener("click", (evt) => {
   f_municao.setAttribute("disabled", disabled)
 })
 
-const gerenciarExibicaoCarros = () =>{
+// Função para remover um carro da matriz e do HTML
+function removerCarro(index) {
+  a_carros.splice(index, 1); // Remove o carro da matriz
+  gerenciarExibicaoCarros(); // Atualiza a exibição dos carros no HTML
+}
 
-  carros.textContent = ""
+const gerenciarExibicaoCarros = () => {
+  carros.textContent = "";
 
-  a_carros.forEach((c) => {
-    const div = document.createElement("div")
-    div.setAttribute("class", "carro")
+  a_carros.forEach((c, index) => {
+    const div = document.createElement("div");
+    div.setAttribute("class", "carro");
     div.textContent = `
-    Nome: ${c.nome},  
+    Nome: ${c.nome},
     Portas: ${c.portas},
     Blindagem: ${c.blindagem},
-    munição: ${c.munição}
-    
-    `
-      carros.appendChild(div)
-  })
+    Munição: ${c.munição}
+    Cor: ${c.cor}
+    `;
+
+    const botaoRemover = document.createElement("button");
+    botaoRemover.textContent = "Remover";
+    botaoRemover.addEventListener("click", () => removerCarro(index)); // Passa o índice corretamente
+
+    div.appendChild(botaoRemover);
+    carros.appendChild(div);
+  });
 }
+
 
 btn_add.addEventListener("click", function(){
   if(f_normal.checked){
