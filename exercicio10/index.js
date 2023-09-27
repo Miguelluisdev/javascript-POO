@@ -27,4 +27,4 @@ darius.atack(Duque)
 
 Duque.atack(darius)
 
-console.log({darius, clarice, Duque})
+console.table({darius, clarice, Duque})
