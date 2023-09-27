@@ -6,7 +6,7 @@ module.exports = class Thief extends Character {
     }
 
     atack(target){
-      const damage = this.attackPoints - target.defensePoints
+      const damage = this.attackPoints - target.defensePoints * 2
       
       if (damage > 0){
         target.lifePoints -= damage
